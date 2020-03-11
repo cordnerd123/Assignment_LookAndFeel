@@ -9,6 +9,7 @@ html {
 .container {
     background-image: url(../img/HotJupiter.jpg);
     background-repeat: no-repeat;
+    position:absolute;
     height:100%;
     width: 100%;
     background-size: cover;
@@ -26,24 +27,18 @@ html {
 }
 .menu {
     position: relative;
-    top: 4em;
-    min-width: 100px;
-    height:1em;
+    top: 18%;
+    height: auto;
     width:fit-content;
-    color: silver;
-    font-size: 2.5vw;
-    left: 2%;
+    font-size: 2vw;
+    left:9%;
 }
     .menu ul {
-        background-color:darkgray   ;
         position: relative;
-        list-style-type: none;
-        color: darkolivegreen;
         text-align: left;
-        font-size: 2vw;
-        font-weight: 400;
+        font-weight: 600;
+        list-style-type: none;
         font-family: 'Agency FB';
-        margin-block-start: -4em;
         padding-inline-start: 10px;
     }
     .menu li{
@@ -54,35 +49,32 @@ html {
         text-decoration: underline;
         cursor: pointer;
     }
-
-@media screen and (max-width: 600px){
-    .menu ul {
-        font-weight: 300;
-        background-color:transparent;
-    }
-    .menu li {
-        float: none;
-    }
-}
-
+/* slide show on home*/
 .slidecontainer{
     background-color:black;
-    position:relative;
-    left:13%    ;
-    top:15em;
-    height:20em;
-    width:75%;
+    position:absolute;
+    left:18%;
+    top:30%;
+    height:65%;
+    width:65%;
 }
-
+.slide {
+    /*background-image:url(../img/Picture1.jpg);*/
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
 .slidedot{
     text-align:center;
     position:relative;
-    top:13em;
+    top:-5%;
+    right:5%;
 }
-
 .dot {
     cursor: pointer;
-    top: 25em;
+    position:relative;
     height: 5px;
     width: 5px;
     margin: 0 2px;
@@ -91,3 +83,57 @@ html {
     display: inline-block;
     transition: background-color 0.6s ease;
 }
+    .active{
+        background-color:red;
+    }
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 2%;
+    margin-top: -22px;
+    color: lightgray;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+.next{
+    right:0;
+}
+.prev{
+    left:0;
+}
+@media screen and (max-width: 600px) {
+    .menu {
+        top: 5%;
+        left: 0;
+    }
+
+        .menu ul {
+            font-weight: 300;
+        }
+
+        .menu li {
+            float: none;
+        }
+
+    .slidecontainer {
+        position: absolute;
+        top: 20%;
+        left: 3em;
+        width: 75%;
+        background-color:transparent;
+    }
+
+    .slide {
+        width:auto;
+        height:inherit;
+    }
+}
+
+
+
+
