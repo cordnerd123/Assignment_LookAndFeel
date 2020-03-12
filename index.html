@@ -1,1 +1,53 @@
-<!--Your HTML code here-->
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <script src="js/main.js"></script>
+    <title>Test Image</title>
+</head>
+<body>
+    <div id="index" class="container">
+        <div class="pgheader"> Welcome to the End of the World!</div>
+        <div class="menu">
+            <ul class="menu">
+                <li><a href="index.html">TAKE ME TO YOUR LEADER</a></li>
+                <li><a href="ImpactData.html">Potential Impact Data</a></li>
+                <li>Liv Tyler and Ben Afflec</li>
+                <li>About Us</li>
+            </ul>
+        </div>
+        <div class="slidecontainer">
+            <div class="slide" style="background-image:url(img/Picture1.jpg)    ">
+                <p class="slidecap displaycap">
+                    What would your do if you knew tomorrow was the end of the world?
+                    Knowing is half the battle! Track space objects destined for Earth
+                    so you aren't caught unaware!
+                </p>
+                <p class="slidecap">
+                    This is caption two. Include a link to the nasa asteroid vs. comet pdf
+                </p>
+                <p class="slidecap">
+                    This is caption three.
+                </p>
+            </div>
+            <div class="slidedot">
+                <span class="dot active" onclick="dotslide(1)"></span>
+                <span class="dot" onclick="dotslide(2)"></span>
+                <span class="dot" onclick="dotslide(3)"></span>
+            </div>
+            <a class="next" onclick="nxtslide(1)">❯</a>
+            <a class="prev" onclick="nxtslide(-1)">❮</a>
+        </div>
+        <div id="index" class="footer">
+            This website is for entertainment purposes only and its sole purpose
+            is to serve as fulfillment for USF MS BAIS requirements.
+        </div>  
+
+
+    </div>
+
+</body>
+</html>

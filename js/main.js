@@ -1,38 +1,41 @@
-/**
- * Your JS code here
- */
-
-/**
- * Sample code
- */
-
 function nxtslide(n) {
+    var x = document.getElementsByClassName("dot").length;
     var sld = document.getElementsByClassName("slide");
-    
     var cursl = sld[0].style.backgroundImage;
     var snum = parseInt(cursl.charAt(16)) + n;
     if (n == 1) 
-        if (snum == 4) snum = 1;
+        if (snum == x+1) snum = 1;
     else 
-        if (snum == 0) snum = 3;
+        if (snum == 0) snum = x;
     var url = "url(img/Picture" + snum + ".jpg)";
     sld[0].style.backgroundImage = url;
-    updatedot(snum-1);
+    updatedot(snum - 1);
+    updatecap(snum - 1);
+}
+
+function updatecap(n) {
+    var cap = document.getElementsByClassName("slidecap");
+    var x = cap.length;
+    for (i = 0; i < x; i++)
+        cap[i].className = "slidecap";
+    cap[n].className += " displaycap";
 }
 
 function updatedot(n){
     var dot = document.getElementsByClassName("dot");
-    for (i = 0; i < 3; i++) {
+    var x = dot.length;
+    for (i = 0; i < x; i++)
         dot[i].className = "dot";
-    }
     dot[n].className += " active";
 }
 
 function dotslide(n){
     var sld = document.getElementsByClassName("slide");
     sld[0].style.backgroundImage = "url(img/Picture" + n + ".jpg)";
-    updatedot(n-1);
+    updatedot(n - 1);
+    updatecap(n - 1);
 }
+
 document.addEventListener('DOMContentLoaded', function() {
   var ulElement = document.getElementById('links');
   var liElement = document.createElement('li');
