@@ -55,12 +55,33 @@ html {
         text-decoration: underline;
         cursor: pointer;
     }
+.signup {
+    position: absolute;
+    top: 1%;
+    right: 2%;
+    width: 20vw;
+    font-size: 1.4vw;
+    background-color:coral;
+    text-align: center;
+}
+    .signup label{
+        font-size:1vw;
+        text-align:left;
+        font-weight:800;
+        }
+    .signup input{
+        font-size:1.25vw;
+        padding:1px;
+        margin-bottom:3px;
+    }
+
+
 /* slide show on home*/
 .slidecontainer{
     background-color:black;
     position:absolute;
     left:18%;
-    top:20%;
+    top:22%;
     height:65%;
     width:65%;
 }
@@ -100,7 +121,6 @@ html {
     background-color: #bbb;
     border-radius: 35%;
     display: inline-block;
-    transition: background-color 0.6s ease;
 }
     .active{
         background-color:red;
@@ -124,7 +144,17 @@ html {
 .prev{
     left:0;
 }
-
+.sendescrip{
+    position:absolute;
+    text-align:center;
+    color:black;
+    font-size:1.5vw;
+    opacity:85%;
+    top:15%;
+    left:15%;
+    width:65%;
+    background-color:lightgray;
+}
 table.sentry{
     position: absolute;
     text-align: center;
@@ -136,7 +166,6 @@ table.sentry{
     border-color: black;
     background-color:lightgrey;
     opacity:55%;
-
 }
     .sentry tr {
         padding: 5px;
@@ -146,7 +175,7 @@ table.sentry{
 #nxt.sentry {
     position: absolute;
     top: 28%;
-    left: 15%;
+    left: 73%;
     font-size: 1.25vw;
 }
     #nxt.sentry:hover{
@@ -155,7 +184,7 @@ table.sentry{
 #prev.sentry{
     position:absolute;
     top:28%;
-    left:74%;
+    left:15%;
     font-size:1.25vw;
 }
     #prev.sentry:hover{
