@@ -34,20 +34,6 @@ function dotslide(n){
     sld[0].style.backgroundImage = "url(img/Picture" + n + ".jpg)";
     updatedot(n - 1);
     updatecap(n - 1);
-}   
-function SignConf() {
-    var name = document.getElementById("fname").value;
-    var email = document.getElementById("email").value;
-
-    if (email == "") {
-        alert('Please enter an email addess');
-        return;
-    }
-    else if (name == "") {
-        alert('Please enter a first name')
-        return;
-    }
-    alert('Thanks ' + name + ' for signing up for our life-saving monthly email!')
 }
 
 document.addEventListener('DOMContentLoaded', function() {
