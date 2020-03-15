@@ -45,7 +45,13 @@ html {
 }
     #duopic.container2 {
     background-image: url(../img/profilepic.png);
+
 }
+.scatterclass {
+    
+    height: 150px;
+    width: 300px;
+}   
 
 
 
