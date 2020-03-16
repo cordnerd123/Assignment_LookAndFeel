@@ -3,10 +3,10 @@ function nxtslide(n) {
     var sld = document.getElementsByClassName("slide");
     var cursl = sld[0].style.backgroundImage;
     var snum = parseInt(cursl.charAt(16)) + n;
-    if (n == 1) 
-        if (snum == x+1) snum = 1;
-    else 
-        if (snum == 0) snum = x;
+    if (n == 1)
+        if (snum == x + 1) snum = 1;
+        else
+            if (snum == 0) snum = x;
     var url = "url(img/Picture" + snum + ".jpg)";
     sld[0].style.backgroundImage = url;
     updatedot(snum - 1);
@@ -21,7 +21,7 @@ function updatecap(n) {
     cap[n].className += " displaycap";
 }
 
-function updatedot(n){
+function updatedot(n) {
     var dot = document.getElementsByClassName("dot");
     var x = dot.length;
     for (i = 0; i < x; i++)
@@ -29,17 +29,32 @@ function updatedot(n){
     dot[n].className += " active";
 }
 
-function dotslide(n){
+function dotslide(n) {
     var sld = document.getElementsByClassName("slide");
     sld[0].style.backgroundImage = "url(img/Picture" + n + ".jpg)";
     updatedot(n - 1);
     updatecap(n - 1);
 }
+function SignConf() {
+    var name = document.getElementById("fname").value;
+    var email = document.getElementById("email").value;
 
-document.addEventListener('DOMContentLoaded', function() {
-  var ulElement = document.getElementById('links');
-  var liElement = document.createElement('li');
-  liElement.appendChild(document.createTextNode('created by main.js'));
+    if (email == "") {
+        alert('Please enter an email addess');
+        return;
+    }
+    else if (name == "") {
+        alert('Please enter a first name')
+        return;
+    }
+    alert('Thanks ' + name + ' for signing up for our life-saving monthly email!')
+}
 
-  ulElement.appendChild(liElement);
+document.addEventListener('DOMContentLoaded', function () {
+    var ulElement = document.getElementById('links');
+    var liElement = document.createElement('li');
+    liElement.appendChild(document.createTextNode('created by main.js'));
+
+    ulElement.appendChild(liElement);
 });
+
